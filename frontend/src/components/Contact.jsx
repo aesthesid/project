@@ -16,7 +16,7 @@ const Contact = () => {
     if (formData.name && formData.email && formData.message) {
       const subject = encodeURIComponent(`Contact Form: ${formData.name}`);
       const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-      window.location.href = `mailto:contact@ovevx.in?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:contact@orevx.in?subject=${subject}&body=${body}`;
       toast.success('Opening email client...');
       setFormData({ name: '', email: '', message: '' });
     } else {
