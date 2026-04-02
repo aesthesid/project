@@ -6,23 +6,32 @@ const Services = () => {
       icon: <Palette className="w-8 h-8" />,
       title: 'Website Design',
       description: 'Stunning, modern designs that capture attention.',
+      whatsappMessage: "Hi, I'm interested in your Website Design service",
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: 'Web Development',
       description: 'Fast, secure, scalable websites built to perform.',
+      whatsappMessage: "Hi, I'm interested in your Web Development service",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'SEO Optimization',
       description: 'Get found online and rank higher on Google.',
+      whatsappMessage: "Hi, I'm interested in your SEO Optimization service",
     },
     {
       icon: <Wrench className="w-8 h-8" />,
       title: 'Website Maintenance',
       description: 'We keep your site fast, secure, and up-to-date.',
+      whatsappMessage: "Hi, I'm interested in your Website Maintenance service",
     },
   ];
+
+  const handleGetStarted = (message) => {
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/91XXXXXXXXXX?text=${encodedMessage}`, '_blank');
+  };
 
   return (
     <section id="services" className="py-24 bg-black relative overflow-hidden">
@@ -45,7 +54,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-400 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+              className="group p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-400 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2 flex flex-col"
             >
               <div className="mb-6 p-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl inline-block group-hover:scale-110 transition-transform duration-400">
                 <div className="text-blue-400">{service.icon}</div>
@@ -53,11 +62,16 @@ const Services = () => {
               <h3 className="text-xl font-bold text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-400 mb-4">{service.description}</p>
-              <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Learn more
-                <ArrowRight className="w-4 h-4" />
-              </div>
+              <p className="text-gray-400 mb-6 flex-grow">{service.description}</p>
+              
+              {/* Get Started Button */}
+              <button
+                onClick={() => handleGetStarted(service.whatsappMessage)}
+                className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500"
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           ))}
         </div>

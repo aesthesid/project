@@ -35,7 +35,8 @@ const Navbar = () => {
             <img
               src="https://customer-assets.emergentagent.com/job_orevx-digital/artifacts/trlg1oww_ChatGPT%20Image%20Apr%202%2C%202026%2C%2009_49_44%20AM.png"
               alt="OrevX"
-              className="h-8 w-auto transition-transform duration-300 group-hover:scale-110"
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+              style={{ background: 'transparent' }}
             />
           </div>
 
