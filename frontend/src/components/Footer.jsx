@@ -100,8 +100,8 @@ const Footer = () => {
             <h3 className="text-white dark:text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-gray-400 dark:text-gray-400">
               <li>
-                <a href="mailto:contact@ovevx.in" className="hover:text-white transition-colors">
-                  contact@ovevx.in
+                <a href="mailto:contact@orevx.in" className="hover:text-white transition-colors">
+                  contact@orevx.in
                 </a>
               </li>
               <li>
