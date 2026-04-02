@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,87 +22,67 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-black/80 dark:bg-black/80 backdrop-blur-lg border-b border-white/10'
+          ? 'bg-black/60 backdrop-blur-xl border-b border-white/5'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection('home')}>
+          {/* Logo Icon */}
+          <div className="flex-shrink-0 cursor-pointer group" onClick={() => scrollToSection('home')}>
             <img
-              src="https://customer-assets.emergentagent.com/job_orevx-digital/artifacts/uqj7wtt8_ChatGPT%20Image%20Apr%202%2C%202026%2C%2009_49_44%20AM.png"
-              alt="OrevX Digital"
-              className="h-10 w-auto"
+              src="https://customer-assets.emergentagent.com/job_orevx-digital/artifacts/trlg1oww_ChatGPT%20Image%20Apr%202%2C%202026%2C%2009_49_44%20AM.png"
+              alt="OrevX"
+              className="h-8 w-auto transition-transform duration-300 group-hover:scale-110"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             <button
               onClick={() => scrollToSection('home')}
-              className="nav-link text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 relative group"
+              className="text-gray-300 hover:text-white transition-colors duration-300 relative group text-sm font-medium"
             >
               Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="nav-link text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 relative group"
+              className="text-gray-300 hover:text-white transition-colors duration-300 relative group text-sm font-medium"
             >
               Services
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection('work')}
-              className="nav-link text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 relative group"
+              className="text-gray-300 hover:text-white transition-colors duration-300 relative group text-sm font-medium"
             >
               Work
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
-              onClick={() => scrollToSection('pricing')}
-              className="nav-link text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 relative group"
+              onClick={() => scrollToSection('about')}
+              className="text-gray-300 hover:text-white transition-colors duration-300 relative group text-sm font-medium"
             >
-              Pricing
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+              About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="nav-link text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 relative group"
+              className="text-gray-300 hover:text-white transition-colors duration-300 relative group text-sm font-medium"
             >
               Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
             </button>
 
-            {/* Theme Toggle */}
+            {/* CTA Button */}
             <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-white/10 dark:bg-white/10 hover:bg-white/20 dark:hover:bg-white/20 transition-all duration-300"
-              aria-label="Toggle theme"
+              onClick={() => scrollToSection('contact')}
+              className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
             >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-yellow-400" />
-              ) : (
-                <Moon className="w-5 h-5 text-blue-500" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-white/10 dark:bg-white/10"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-yellow-400" />
-              ) : (
-                <Moon className="w-5 h-5 text-blue-500" />
-              )}
+              Let's Talk
             </button>
           </div>
         </div>

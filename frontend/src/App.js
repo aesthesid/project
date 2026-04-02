@@ -6,8 +6,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
+import About from "./components/About";
 import WhyChooseUs from "./components/WhyChooseUs";
-import Pricing from "./components/Pricing";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -15,13 +15,13 @@ import Footer from "./components/Footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
+    <div className="min-h-screen bg-black">
       <Navbar />
       <Hero />
       <Services />
       <Portfolio />
+      <About />
       <WhyChooseUs />
-      <Pricing />
       <CTA />
       <Contact />
       <WhatsAppButton />
@@ -39,7 +39,7 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
         </BrowserRouter>
-        <Toaster position="top-right" />
+        <Toaster position="top-right" richColors />
       </div>
     </ThemeProvider>
   );

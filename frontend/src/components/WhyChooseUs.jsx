@@ -3,52 +3,52 @@ import { Zap, Smartphone, TrendingUp, DollarSign } from 'lucide-react';
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-7 h-7" />,
       title: 'Fast Delivery',
-      description: 'Get your website live in 7-14 days, not months',
+      description: 'Your website live in 3-5 days, not weeks or months',
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <Smartphone className="w-7 h-7" />,
       title: 'Mobile Optimized',
-      description: 'Perfectly responsive on all devices and screen sizes',
+      description: 'Perfect on every device, from phones to desktops',
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'High Converting Design',
+      icon: <TrendingUp className="w-7 h-7" />,
+      title: 'Conversion-Focused Design',
       description: 'Built to turn visitors into paying customers',
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: 'Affordable Pricing',
-      description: 'Premium quality at prices that fit your budget',
+      icon: <DollarSign className="w-7 h-7" />,
+      title: 'Affordable & Scalable',
+      description: 'Premium quality that fits your budget and grows with you',
     },
   ];
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-black">
+    <section className="py-24 bg-black border-y border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Why Choose Us
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Why choose Orevx?
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            We deliver exceptional value for ambitious businesses
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            We deliver results, not just websites
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center p-8 bg-white dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/10 hover:border-cyan-400 dark:hover:border-cyan-400 transition-all duration-400 hover:scale-105 hover:shadow-xl"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-400 hover:scale-105"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full mb-6">
-                <div className="text-white">{feature.icon}</div>
+              <div className="mb-6 p-3 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl inline-block group-hover:scale-110 transition-transform duration-400">
+                <div className="text-blue-400">{feature.icon}</div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-xl font-bold text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+              <p className="text-gray-400 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

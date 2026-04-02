@@ -1,63 +1,63 @@
-import { Palette, Code, TrendingUp, Wrench } from 'lucide-react';
+import { Palette, Code, TrendingUp, Wrench, ArrowRight } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: <Palette className="w-10 h-10" />,
+      icon: <Palette className="w-8 h-8" />,
       title: 'Website Design',
-      description: 'Beautiful, modern designs that capture your brand essence and engage your audience.',
+      description: 'Stunning, modern designs that capture attention.',
     },
     {
-      icon: <Code className="w-10 h-10" />,
-      title: 'Development',
-      description: 'Fast, responsive, and SEO-optimized websites built with the latest technologies.',
+      icon: <Code className="w-8 h-8" />,
+      title: 'Web Development',
+      description: 'Fast, secure, scalable websites built to perform.',
     },
     {
-      icon: <TrendingUp className="w-10 h-10" />,
+      icon: <TrendingUp className="w-8 h-8" />,
       title: 'SEO Optimization',
-      description: 'Get found on Google. We optimize your site to rank higher and attract more customers.',
+      description: 'Get found online and rank higher on Google.',
     },
     {
-      icon: <Wrench className="w-10 h-10" />,
-      title: 'Maintenance',
-      description: 'Keep your website running smoothly with regular updates and technical support.',
+      icon: <Wrench className="w-8 h-8" />,
+      title: 'Website Maintenance',
+      description: 'We keep your site fast, secure, and up-to-date.',
     },
   ];
 
   return (
-    <section id="services" className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
-        <img
-          src="https://images.pexels.com/photos/30547616/pexels-photo-30547616.jpeg?w=1920&q=80"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <section id="services" className="py-24 bg-black relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-64 bg-gradient-to-b from-blue-600/10 to-transparent blur-3xl"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Our Services
+          <div className="inline-block px-4 py-2 bg-blue-600/10 border border-blue-500/20 rounded-full mb-4">
+            <span className="text-sm text-blue-400 font-semibold uppercase tracking-wider">Services</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Everything your website<br />needs to succeed.
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Everything you need to establish a powerful online presence
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Service Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 bg-white dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/10 hover:border-cyan-400 dark:hover:border-cyan-400 transition-all duration-400 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+              className="group p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-400 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
             >
-              <div className="mb-6 text-cyan-500 group-hover:scale-110 transition-transform duration-400">
-                {service.icon}
+              <div className="mb-6 p-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl inline-block group-hover:scale-110 transition-transform duration-400">
+                <div className="text-blue-400">{service.icon}</div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-xl font-bold text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">{service.description}</p>
+              <p className="text-gray-400 mb-4">{service.description}</p>
+              <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Learn more
+                <ArrowRight className="w-4 h-4" />
+              </div>
             </div>
           ))}
         </div>
