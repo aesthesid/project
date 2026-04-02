@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-black border-y border-gray-200 dark:border-white/10">
+    <section className="py-24 bg-white dark:bg-black border-y border-gray-200 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -40,15 +40,15 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 bg-white dark:bg-gradient-to-br dark:from-white/5 dark:to-white/0 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-all duration-400 hover:scale-105"
+              className="group p-8 bg-gray-900 dark:bg-gradient-to-br dark:from-white/5 dark:to-white/0 backdrop-blur-sm rounded-2xl border border-gray-800 dark:border-white/10 hover:border-blue-500/50 transition-all duration-400 hover:scale-105"
             >
               <div className="mb-6 p-3 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl inline-block group-hover:scale-110 transition-transform duration-400">
-                <div className="text-blue-500 dark:text-blue-400">{feature.icon}</div>
+                <div className="text-blue-400 dark:text-blue-400">{feature.icon}</div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-xl font-bold text-white dark:text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
+              <p className="text-gray-300 dark:text-gray-400 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
