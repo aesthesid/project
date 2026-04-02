@@ -2,7 +2,7 @@ import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/91XXXXXXXXXX', '_blank');
+    window.open('https://wa.me/919490901527', '_blank');
   };
 
   return (
@@ -12,7 +12,7 @@ const WhatsAppButton = () => {
       aria-label="Contact us on WhatsApp"
     >
       <MessageCircle className="w-7 h-7 group-hover:scale-110 transition-transform" />
-      <span className="absolute right-full mr-3 px-3 py-1 bg-white text-gray-900 text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
+      <span className="absolute right-full mr-3 px-3 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
         Chat with us
       </span>
     </button>

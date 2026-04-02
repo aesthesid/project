@@ -11,12 +11,12 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black pt-20"
     >
       {/* Animated Background Gradients */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-600/30 dark:bg-blue-600/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-600/30 dark:bg-purple-600/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
@@ -26,13 +26,13 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-32 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-gray-300 dark:border-white/10 rounded-full mb-8">
           <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-          <span className="text-sm text-gray-300">Websites that drive real growth.</span>
+          <span className="text-sm text-gray-700 dark:text-gray-300">Websites that drive real growth.</span>
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
           We design websites that turn<br />
           visitors into{' '}
           <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
@@ -40,7 +40,7 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
           Built for small businesses that want real growth, not just a website.
         </p>
 
@@ -56,7 +56,7 @@ const Hero = () => {
 
           <button
             onClick={() => scrollToSection('work')}
-            className="group px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 hover:border-white/40 transition-all duration-400 flex items-center gap-2"
+            className="group px-8 py-4 bg-transparent border-2 border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 hover:border-gray-400 dark:hover:border-white/40 transition-all duration-400 flex items-center gap-2"
           >
             <Play className="w-5 h-5" />
             View Our Work
@@ -65,39 +65,39 @@ const Hero = () => {
 
         {/* Trust Section */}
         <div className="mt-12">
-          <p className="text-sm text-gray-500 mb-8 uppercase tracking-wider">
+          <p className="text-sm text-gray-500 dark:text-gray-500 mb-8 uppercase tracking-wider">
             Trusted by growing businesses
           </p>
           
           {/* Stats */}
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-            <div className="flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+            <div className="flex items-center gap-3 px-6 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-300 dark:border-white/10 rounded-xl">
               <div className="p-2 bg-blue-600/20 rounded-lg">
-                <Zap className="w-5 h-5 text-blue-400" />
+                <Zap className="w-5 h-5 text-blue-500 dark:text-blue-400" />
               </div>
               <div className="text-left">
-                <div className="text-lg font-bold text-white">3-5 Days</div>
-                <div className="text-xs text-gray-400">Fast Delivery</div>
+                <div className="text-lg font-bold text-gray-900 dark:text-white">3-5 Days</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Fast Delivery</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+            <div className="flex items-center gap-3 px-6 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-300 dark:border-white/10 rounded-xl">
               <div className="p-2 bg-purple-600/20 rounded-lg">
-                <Smartphone className="w-5 h-5 text-purple-400" />
+                <Smartphone className="w-5 h-5 text-purple-500 dark:text-purple-400" />
               </div>
               <div className="text-left">
-                <div className="text-lg font-bold text-white">Mobile First</div>
-                <div className="text-xs text-gray-400">Always Responsive</div>
+                <div className="text-lg font-bold text-gray-900 dark:text-white">Mobile First</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Always Responsive</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+            <div className="flex items-center gap-3 px-6 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-300 dark:border-white/10 rounded-xl">
               <div className="p-2 bg-blue-600/20 rounded-lg">
-                <TrendingUp className="w-5 h-5 text-blue-400" />
+                <TrendingUp className="w-5 h-5 text-blue-500 dark:text-blue-400" />
               </div>
               <div className="text-left">
-                <div className="text-lg font-bold text-white">Built to Convert</div>
-                <div className="text-xs text-gray-400">Results That Matter</div>
+                <div className="text-lg font-bold text-gray-900 dark:text-white">Built to Convert</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Results That Matter</div>
               </div>
             </div>
           </div>

@@ -12,9 +12,12 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Mock form submission
+    // Mock form submission - sends mailto link
     if (formData.name && formData.email && formData.message) {
-      toast.success('Message sent successfully! We\'ll get back to you soon.');
+      const subject = encodeURIComponent(`Contact Form: ${formData.name}`);
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+      window.location.href = `mailto:contact@ovevx.in?subject=${subject}&body=${body}`;
+      toast.success('Opening email client...');
       setFormData({ name: '', email: '', message: '' });
     } else {
       toast.error('Please fill in all fields');
@@ -29,20 +32,20 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/91XXXXXXXXXX', '_blank');
+    window.open('https://wa.me/919490901527', '_blank');
   };
 
   return (
-    <section id="contact" className="py-24 bg-black border-t border-white/10">
+    <section id="contact" className="py-24 bg-white dark:bg-black border-t border-gray-200 dark:border-white/10">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Column - Form */}
           <div>
             <div className="inline-block px-4 py-2 bg-purple-600/10 border border-purple-500/20 rounded-full mb-6">
-              <span className="text-sm text-purple-400 font-semibold uppercase tracking-wider">Contact</span>
+              <span className="text-sm text-purple-500 dark:text-purple-400 font-semibold uppercase tracking-wider">Contact</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Send us a message.<br />
               We'll reply soon.
             </h2>
@@ -55,7 +58,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500 transition-all duration-300"
+                  className="w-full px-4 py-4 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 transition-all duration-300"
                   placeholder="Your Name"
                   required
                 />
@@ -68,7 +71,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500 transition-all duration-300"
+                  className="w-full px-4 py-4 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 transition-all duration-300"
                   placeholder="Your Email"
                   required
                 />
@@ -81,7 +84,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="5"
-                  className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-4 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 transition-all duration-300 resize-none"
                   placeholder="Your Message"
                   required
                 ></textarea>
@@ -102,12 +105,12 @@ const Contact = () => {
             <div className="text-center">
               <div className="mb-8">
                 <div className="inline-block p-6 bg-gradient-to-br from-green-600/20 to-green-400/10 rounded-3xl mb-6">
-                  <MessageCircle className="w-16 h-16 text-green-400" />
+                  <MessageCircle className="w-16 h-16 text-green-500 dark:text-green-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   Or chat with us on<br />WhatsApp
                 </h3>
-                <p className="text-gray-400 mb-8">
+                <p className="text-gray-600 dark:text-gray-400 mb-8">
                   Get instant replies to your questions.
                 </p>
               </div>

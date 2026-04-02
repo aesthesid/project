@@ -23,20 +23,20 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="work" className="py-24 bg-black">
+    <section id="work" className="py-24 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="flex items-center justify-between mb-16">
           <div>
             <div className="inline-block px-4 py-2 bg-purple-600/10 border border-purple-500/20 rounded-full mb-4">
-              <span className="text-sm text-purple-400 font-semibold uppercase tracking-wider">Our Work</span>
+              <span className="text-sm text-purple-500 dark:text-purple-400 font-semibold uppercase tracking-wider">Our Work</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Websites we've built.<br />
               Results our clients love.
             </h2>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+          <button className="hidden md:flex items-center gap-2 text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors">
             View All
             <ArrowRight className="w-5 h-5" />
           </button>
@@ -47,7 +47,7 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all duration-400 cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-all duration-400 cursor-pointer"
             >
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
